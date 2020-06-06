@@ -56,6 +56,16 @@ hr{
     border-top: 1px solid rgb(70, 71, 71);
 }
 
+body .main a{
+    text-decoration: none;
+    color: rgb(36, 196, 196);
+    transition: 0.1s;
+}
+
+body .main a:hover{
+    transition: 0.1s;
+}
+
 .tab{
     background-color: #232425;
     padding: 15px;
@@ -93,6 +103,32 @@ hr{
     margin-right: 8px;
 }
 
+#about ul li a:hover{
+    text-decoration:underline;
+}
+
+#repos ul li i{
+    color:#EA722C;
+}
+
+#repos ul li a:hover{
+    color: #B8BBBF;
+}
+
+#repos ul li{
+    flex-direction: column !important;
+}
+
+#repos ul li span{
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width:900px){
+    .tab{
+        width:70%;
+    }
+}
+
 @media screen and (max-width:700px){
     .tab{
         width:95%;
@@ -104,6 +140,16 @@ hr{
         width: 40px;
         height: 40px;
         border-width: 5px;
+    }
+}
+
+@media screen and (max-width:400px){
+    #about ul li{
+        flex-direction: column;
+    }
+
+    #about ul li span{
+        margin-bottom: 15px;
     }
 }
 
