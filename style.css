@@ -1,0 +1,109 @@
+body{
+    background-color: #18191A;
+    color: #B8BBBF;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body li{
+    list-style-type: none;
+}
+
+#loading{
+    width: 80px;
+    height: 80px;
+    border: 10px solid #B8BBBF;
+    border-top-color: rgb(0, 255, 115);
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    animation: go-round 1s linear infinite;
+}
+
+@keyframes go-round{
+    from{transform: rotate(0deg)}
+    to{transform: rotate(360deg);}
+}
+
+.other{
+    justify-content: center;
+    display: flex;
+    flex-flow: wrap;
+}
+
+#profile{
+    text-align: center;
+    margin: 20px 0;
+}
+
+#profile #photo img{
+    border-radius: 50%;
+    width: 200px;
+    box-shadow: 0px 0px 27px 2px rgba(0,0,0,0.75);
+}
+
+#profile #name p{
+    font-size: 30px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+hr{
+    border: 0;
+    border-top: 1px solid rgb(70, 71, 71);
+}
+
+.tab{
+    background-color: #232425;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    width: 50%;
+    box-shadow: 0px 0px 14px -2px rgba(0,0,0,0.75);
+
+}
+
+.tab .title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tab .content ul li{
+    background-color: #3A3B3C;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tab .content ul li span{
+    padding: 0;
+    color: #B8BBBF;
+    margin: 0;
+    font-weight: 600;
+}
+
+.tab .content ul li i{
+    margin-right: 8px;
+}
+
+@media screen and (max-width:700px){
+    .tab{
+        width:95%;
+    }
+    .tab .content ul{
+        padding: 0;
+    }
+    #loading{
+        width: 40px;
+        height: 40px;
+        border-width: 5px;
+    }
+}
+
