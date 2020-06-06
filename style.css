@@ -23,6 +23,21 @@ body li{
     animation: go-round 1s linear infinite;
 }
 
+#repos ul{
+    position: relative;
+}
+
+#loading_repos{
+    width: 30px;
+    height: 30px;
+    border: 5px solid #B8BBBF;
+    border-top-color: rgb(0, 255, 115);
+    border-radius: 50%;
+    text-align: center;
+    animation: go-round 1s linear infinite;
+    margin:30px 0;
+}
+
 @keyframes go-round{
     from{transform: rotate(0deg)}
     to{transform: rotate(360deg);}
@@ -65,6 +80,7 @@ body .main a{
 body .main a:hover{
     transition: 0.1s;
 }
+
 
 .tab{
     background-color: #232425;
@@ -121,6 +137,31 @@ body .main a:hover{
 
 #repos ul li span{
     margin-bottom: 15px;
+}
+
+#social ul li a{
+    color: #B8BBBF;
+}
+
+#social ul li a:hover{
+    color: rgb(36, 196, 196);
+}
+
+#navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+#navigation a{
+    padding: 5px 8px;
+    background-color:#3A3B3C;
+    border-radius: 3px;
+}
+
+.btn-disable{
+    cursor: no-drop !important;
+    pointer-events: none !important;
+    background-color: rgb(133, 133, 133) !important;
 }
 
 @media screen and (max-width:900px){
