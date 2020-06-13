@@ -3,9 +3,10 @@ let total_repos="";
 let current_repos=0;
 let current_page="";
 let prev_clicked = false;
+let prev_number=0;
 
 function start(){
-    fetch("https://api.github.com/users/iamsubingyawali")
+    fetch("https://api.github.com/users/instafluff")
         .then(result => result.json())
         .then(function(data) {
             execute(data);
@@ -48,6 +49,7 @@ function execute(data){
 }
 
 function fetchRepos(repos_url,page_no){
+    prev_number=0;
     let parent = document.querySelector("#repos ul");
     parent.innerHTML = '<div id="loading_repos"></div>';
 
@@ -66,12 +68,10 @@ function fetchRepos(repos_url,page_no){
         
         repos.forEach(repo => {
             // console.log(repo);
-            if(prev_clicked){
-                current_repos-=1;
-            }
-            else{
+            if(!prev_clicked){
                 current_repos+=1;
             }
+            prev_number+=1;
             post('<i class="fas fa-folder-open"></i><a target="_blank" href="'+repo['html_url']+'">'+repo['name']+'</a>',repo['description'],"#repos ul");
         });
 
@@ -95,6 +95,7 @@ function nextClicked(){
 function prevClicked(){
     current_page-=1;
     prev_clicked = true;
+    current_repos-=prev_number;
     fetchRepos(repos_url,current_page);
 }
 
