@@ -6,7 +6,7 @@ let prev_clicked = false;
 let prev_number=0;
 
 function start(){
-    fetch("https://api.github.com/users/instafluff")
+    fetch("https://api.github.com/users/iamsubingyawali")
         .then(result => result.json())
         .then(function(data) {
             execute(data);
